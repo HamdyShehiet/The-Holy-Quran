@@ -1,5 +1,39 @@
+
+:root{
+    --main-color:#ffffff;
+    --primary-color:#ebf9fa;
+    --secondary-color:#22a5ad;
+    --secondary-color-2:#2ca4ab;
+    --text-color:#272727;
+    --borders-color:#ebeef0;
+    --fs-14px:14px;
+    --fs-16px:16px;
+    --fs-20px:20px;
+    --fs-24px:24px;
+    --fs-30px:30px;
+    --fs-34px:34px;
+    --fs-40px:40px;
+    --fw-400:400;
+    --fw-500:500;
+    --fw-600:600;
+    --fw-700:700;
+}
 body{
-    font-family: "Amiri Quran", serif;
-    font-family: "Amiri", serif;
+    /* font-family: "Amiri Quran", serif;
+    font-family: "Amiri", serif; */
     font-family: "Poppins", serif;
+}
+body.sepia{
+    --main-color:#f8ebd5;
+    --primary-color:#f2e0bf;
+    --secondary-color:#ad9a78;
+    --secondary-color-2:#72603f;
+    --text-color:#010101;
+}
+body.dark{
+    --main-color:#1f2125;
+    --primary-color:#272f33;
+    --secondary-color:#1d2222;
+    --secondary-color-2:#2ca4ab;
+    --text-color:#e7e9ea;
 }
