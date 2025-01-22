@@ -5,7 +5,8 @@
 }
 :root{
     --main-color:#ffffff;
-    --primary-color:#ebf9fa;
+    /* --primary-color:#ebf9fa; */
+    --primary-color:#eefbfc;
     --secondary-color:#22a5ad;
     --secondary-color-2:#2ca4ab;
     --text-color:#272727;
@@ -29,7 +30,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: "Amiri Quran", serif;
+    background-color: var(--main-color);
 }
 body.sepia{
     --main-color:#f8ebd5;
@@ -72,3 +73,4 @@ img{
 .grid{
     display: grid;
 }
+/* Component */
