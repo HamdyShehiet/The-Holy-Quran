@@ -60,3 +60,14 @@ span{
 img{
     max-width: 100%;
 }
+/* Utility Classes */
+.flex{
+    display: flex;
+}
+.i-flex{
+    display: inline-flex;
+    align-items: center;
+}
+.grid{
+    display: grid;
+}
