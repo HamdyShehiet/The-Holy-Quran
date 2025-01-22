@@ -10,6 +10,9 @@
     --secondary-color-2:#2ca4ab;
     --text-color:#272727;
     --borders-color:#ebeef0;
+    --ff-poppins:"Poppins", serif;
+    --ff-amiri:"Amiri", serif;
+    --ff-amiri-quran:"Amiri Quran", serif;
     --fs-14px:14px;
     --fs-16px:16px;
     --fs-20px:20px;
@@ -26,9 +29,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    /* font-family: "Amiri Quran", serif;
-    font-family: "Amiri", serif; */
-    font-family: "Poppins", serif;
+    font-family: "Amiri Quran", serif;
 }
 body.sepia{
     --main-color:#f8ebd5;
