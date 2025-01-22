@@ -74,3 +74,22 @@ img{
     display: grid;
 }
 /* Component */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 25px 0;
+    box-shadow: 0 4px 4px 0 rgba(0 0 0 /.08);
+    background-color: var(--primary-color);
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .container .logo a{
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-30px);
+    font-weight: var(--fw-600);
+    color: var(--text-color);
+}
