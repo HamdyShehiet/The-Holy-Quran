@@ -10,37 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
-<body>
+<body class="">
     <header>
         <div class="container">
             <div class="logo"><a href="index.html">Quran</a></div>
-            <div class="setting-icon"><img src="assets/icons/setting-light-mode.webp" alt="Setting Icon" width="30"></div>
-            <div class="setting-menu">
-                <div class="row flex">
+            <div class="setting-icon"><img src="assets/icons/setting-light-mode.webp" alt="Setting Icon" width="25"></div>
+            <div class="setting-menu flex">
+                <div class="setting row flex">
                     <span class="setting-title">Settings</span>
-                    <img src="assets/icons/close-light-mode.webp" width="30" alt="Close Icon">
+                    <img class="close-menu" src="assets/icons/close-light-mode.webp" width="25" alt="Close Icon">
                 </div>
-                <div class="row">
+                <div class="theme row flex">
                     <span class="theme-title">Theme</span>
                     <div class="theme-options flex">
-                        <div class="light">
+                        <div class="light col active-mode">
+                            <img src="assets/icons/sun.webp" alt="Sun Icon" width="20">
                             <span>Light</span>
-                            <img src="assets/icons/sun.webp" alt="Sun Icon" width="30">
                         </div>
-                        <div class="sepia">
+                        <div class="sepia col ">
+                            <img src="assets/icons/sepia.webp" alt="Sepia Icon" width="20">
                             <span>Sepia</span>
-                            <img src="assets/icons/moon.webp" alt="Moon Icon" width="30">
                         </div>
-                        <div class="dark">
+                        <div class="dark col ">
+                            <img src="assets/icons/moon.webp" alt="Moon Icon" width="20">
                             <span>Dark</span>
-                            <img src="assets/icons/sepia.webp" alt="Sepia Icon" width="30">
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="font row flex">
                     <span class="font-title">Font Size</span>
                     <div class="font-options flex">
-                        <div class="light">
+                        <div class="light active-font">
                             <span>Small</span>
                         </div>
                         <div class="sepia">

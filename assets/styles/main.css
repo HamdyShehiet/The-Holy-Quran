@@ -4,12 +4,22 @@
     box-sizing: border-box;
 }
 :root{
-    --main-color:#ffffff;
-    /* --primary-color:#ebf9fa; */
-    --primary-color:#eefbfc;
+    /* --main-color:#ffffff;
+    --primary-color:#ebf9fa;
     --secondary-color:#22a5ad;
     --secondary-color-2:#2ca4ab;
     --text-color:#272727;
+    --borders-color:#ebeef0;
+    --options-color:#eff1f3;
+    --mode-option-color:#ffffff; */
+    --main-color:#ffffff;
+    --primary-color:#FFFFFF;
+    --secondary-color:#ebf9fa;
+    --secondary-color-2:#22a5ad;
+    --secondary-color-3:#2ca4ab;
+    --text-color:#272727;
+    --options-color:#eff1f3;
+    --mode-option-color:#ffffff;
     --borders-color:#ebeef0;
     --ff-poppins:"Poppins", serif;
     --ff-amiri:"Amiri", serif;
@@ -34,17 +44,24 @@ body{
 }
 body.sepia{
     --main-color:#f8ebd5;
-    --primary-color:#f2e0bf;
-    --secondary-color:#ad9a78;
-    --secondary-color-2:#72603f;
+    --primary-color:#fff7ea;
+    --secondary-color:#f2e0bf;
+    --secondary-color-2:#ad9a78;
+    --secondary-color-3:#72603f;
     --text-color:#010101;
+    --options-color:#efe2cd;
+    --mode-option-color:#fff7ea;
 }
 body.dark{
     --main-color:#1f2125;
-    --primary-color:#272f33;
-    --secondary-color:#1d2222;
-    --secondary-color-2:#2ca4ab;
+    --primary-color:#343a40;
+    --secondary-color:#272f33;
+    --secondary-color-2:#1d2222;
+    --secondary-color-3:#2ca4ab;
     --text-color:#e7e9ea;
+    --options-color:#212529;
+    --mode-option-color:#343a40;
+
 }
 .container{
     margin: auto;
@@ -77,8 +94,8 @@ img{
 header{
     position: sticky;
     top: 0;
-    z-index: 1;
-    padding: 25px 0;
+    z-index: 5;
+    padding: 20px 0;
     box-shadow: 0 4px 4px 0 rgba(0 0 0 /.08);
     background-color: var(--primary-color);
 }
@@ -86,9 +103,9 @@ header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: var(--ff-poppins);
 }
 header .container .logo a{
-    font-family: var(--ff-poppins);
     font-size: var(--fs-30px);
     font-weight: var(--fw-600);
     color: var(--text-color);
