@@ -16,3 +16,49 @@ settingBtn.addEventListener("click",(e)=>{
 closeBtn.addEventListener("click",(e)=>{
     settingMenu.classList.remove("open");
 });
+
+let theme = localStorage.getItem("theme");
+
+function lightMode(){
+    document.body.classList.remove("sepia","dark");
+    lightModeBtn.classList.add("active-mode");
+    sepiaModeBtn.classList.remove("active-mode");
+    darkModeBtn.classList.remove("active-mode");
+    document.getElementById("close-setting-btn").src = "assets/icons/close-light-mode.webp"
+    localStorage.setItem("theme","lightMode");
+}
+function sepiaMode(){
+    document.body.className= "sepia";
+    sepiaModeBtn.classList.add("active-mode");
+    lightModeBtn.classList.remove("active-mode");
+    darkModeBtn.classList.remove("active-mode");
+    document.getElementById("close-setting-btn").src = "assets/icons/close-light-mode.webp"
+    localStorage.setItem("theme","sepiaMode");
+}
+function darkMode(){
+    document.body.className = "dark";
+    darkModeBtn.classList.add("active-mode");
+    lightModeBtn.classList.remove("active-mode");
+    sepiaModeBtn.classList.remove("active-mode");
+    document.getElementById("close-setting-btn").src = "assets/icons/close-dark-mode.webp"
+    localStorage.setItem("theme","darkMode");
+}
+
+if(theme == "darkMode"){
+    darkMode();
+}else if(theme == "sepiaMode"){
+    sepiaMode();
+}else{
+    lightMode();
+}
+
+lightModeBtn.onclick = ()=>{
+    theme= localStorage.getItem("theme")
+        lightMode();
+}
+sepiaModeBtn.onclick = ()=>{
+        sepiaMode()
+}
+darkModeBtn.onclick = ()=>{
+        darkMode()
+}

@@ -178,7 +178,6 @@ header .container .setting-menu .font-options{
     border-radius: 50px;
     font-size: var(--fs-14px);
     background-color: var(--options-color);
-    /* background-color: blueviolet; */
 }
 header .container .setting-menu .theme-options .col{
     display: flex;
@@ -191,17 +190,17 @@ header .container .setting-menu .theme-options .active-mode{
     box-shadow: 0 4px 4px 0 rgba(0 0 0 /.09);
     background-color: var(--mode-option-color);
 }
-header .container .setting-menu .font-options .active-font{
-    padding: 5px 30px;
-    border-radius: 40px;
-    box-shadow: 0 4px 4px 0 rgba(0 0 0 /.09);
-    background-color: var(--mode-option-color);
-}
 header .container .setting-menu .theme-options .col img{
     display: none;
 }
 header .container .setting-menu .theme-options .active-mode img{
     display: block;
+}
+header .container .setting-menu .font-options .active-font{
+    padding: 5px 30px;
+    border-radius: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0 0 0 /.09);
+    background-color: var(--mode-option-color);
 }
 header .container img{
     cursor: pointer;
