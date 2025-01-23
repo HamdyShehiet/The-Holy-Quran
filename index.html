@@ -14,43 +14,37 @@
     <header>
         <div class="container">
             <div class="logo"><a href="index.html">Quran</a></div>
-            <div class="setting-icon"><img src="assets/icons/setting-light-mode.webp" alt="Setting Icon" width="25"></div>
+            <button id="setting-btn" class="setting-icon i-flex"><img src="assets/icons/setting-light-mode.webp" alt="Setting Icon" width="25"></button>
             <div class="setting-menu flex">
                 <div class="setting row flex">
                     <span class="setting-title">Settings</span>
-                    <img class="close-menu" src="assets/icons/close-light-mode.webp" width="25" alt="Close Icon">
+                    <img id="close-setting-btn" class="close-menu" src="assets/icons/close-light-mode.webp" width="25" alt="Close Icon">
                 </div>
                 <div class="theme row flex">
                     <span class="theme-title">Theme</span>
                     <div class="theme-options flex">
-                        <div class="light col active-mode">
+                        <button id="light-mode-btn" class="light col active-mode">
                             <img src="assets/icons/sun.webp" alt="Sun Icon" width="20">
                             <span>Light</span>
-                        </div>
-                        <div class="sepia col ">
+                        </button>
+                        <button id="sepia-mode-btn" class="sepia col ">
                             <img src="assets/icons/sepia.webp" alt="Sepia Icon" width="20">
                             <span>Sepia</span>
-                        </div>
-                        <div class="dark col ">
+                        </button>
+                        <button id="dark-mode-btn" class="dark col ">
                             <img src="assets/icons/moon.webp" alt="Moon Icon" width="20">
                             <span>Dark</span>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="font row flex">
                     <span class="font-title">Font Size</span>
                     <div class="font-options flex">
-                        <div class="light active-font">
-                            <span>Small</span>
-                        </div>
-                        <div class="sepia">
-                            <span>Medium</span>
-                        </div>
-                        <div class="dark">
-                            <span>Dark</span>
-                        </div>
+                        <button id="small-font-btn" class="light active-font">Small</button>
+                        <button id="medium-font-btn" class="sepia">Medium</button>
+                        <button id="big-font-btn" class="dark">Big</button>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     </header>
