@@ -118,13 +118,14 @@ header .container .logo a{
 }
 header .container button{
     background-color: transparent;
+    cursor: pointer;
 }
 header .container .setting-menu{
     flex-direction: column;
     gap: 40px;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     z-index: 10;
     max-width: 400px;
     width: 100%;
@@ -133,6 +134,10 @@ header .container .setting-menu{
     box-shadow: -4px -4px 4px 0 rgba(0 0 0 /.08);
     color: var(--text-color);
     background-color: var(--primary-color);
+    transition: all .5s ease;
+}
+header .container .open{
+    right: 0;
 }
 header .container .setting-menu .row{
     padding: 0 15px;
@@ -197,4 +202,7 @@ header .container .setting-menu .theme-options .col img{
 }
 header .container .setting-menu .theme-options .active-mode img{
     display: block;
+}
+header .container img{
+    cursor: pointer;
 }
