@@ -201,3 +201,27 @@ header .container .setting-menu .font-options .active-font{
 header .container img{
     cursor: pointer;
 }
+.select-section .container{
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+}
+.select-section .container .custom-select{
+    max-width: 250px;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--secondary-color-3);
+}
+.select-section .container .custom-select select{
+    display: block;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: var(--ff-amiri);
+    font-size: var(--fs-22px);
+    font-weight: var(--fw-600);
+    background-color: transparent;
+    color: var(--light-text-color);
+}
