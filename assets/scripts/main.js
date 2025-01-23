@@ -24,6 +24,7 @@ function lightMode(){
     lightModeBtn.classList.add("active-mode");
     sepiaModeBtn.classList.remove("active-mode");
     darkModeBtn.classList.remove("active-mode");
+    document.querySelector(".setting-icon img").src = "assets/icons/setting-light-mode.webp";
     document.getElementById("close-setting-btn").src = "assets/icons/close-light-mode.webp"
     localStorage.setItem("theme","lightMode");
 }
@@ -32,6 +33,7 @@ function sepiaMode(){
     sepiaModeBtn.classList.add("active-mode");
     lightModeBtn.classList.remove("active-mode");
     darkModeBtn.classList.remove("active-mode");
+    document.querySelector(".setting-icon img").src = "assets/icons/setting-light-mode.webp";
     document.getElementById("close-setting-btn").src = "assets/icons/close-light-mode.webp"
     localStorage.setItem("theme","sepiaMode");
 }
@@ -40,7 +42,8 @@ function darkMode(){
     darkModeBtn.classList.add("active-mode");
     lightModeBtn.classList.remove("active-mode");
     sepiaModeBtn.classList.remove("active-mode");
-    document.getElementById("close-setting-btn").src = "assets/icons/close-dark-mode.webp"
+    document.querySelector(".setting-icon img").src = "assets/icons/setting-dark-mode.webp";
+    document.getElementById("close-setting-btn").src = "assets/icons/close-dark-mode.webp";
     localStorage.setItem("theme","darkMode");
 }
 
@@ -53,7 +56,6 @@ if(theme == "darkMode"){
 }
 
 lightModeBtn.onclick = ()=>{
-    theme= localStorage.getItem("theme")
         lightMode();
 }
 sepiaModeBtn.onclick = ()=>{
