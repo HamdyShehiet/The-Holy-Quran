@@ -240,3 +240,17 @@ header .container img{
     background-color: transparent;
     color: var(--light-text-color);
 }
+.surah .container{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.surah .container .surah-name{
+    font-family: var(--ff-amiri);
+    font-size: var(--fs-40px);
+}
+.surah .container .verses{
+    padding: 20px;
+    font-family: var(--ff-amiri-quran);
+    font-size: var(--fs-40px);
+}
