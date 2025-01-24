@@ -204,7 +204,7 @@ header .container img{
 .select-section .container{
     align-items: center;
     justify-content: center;
-    min-height: 30vh;
+    min-height: 20vh;
 }
 .select-section .container .custom-select{
     max-width: 250px;
