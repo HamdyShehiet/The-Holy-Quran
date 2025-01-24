@@ -248,9 +248,11 @@ header .container img{
 .surah .container .surah-name{
     font-family: var(--ff-amiri);
     font-size: var(--fs-40px);
+    color: var(--text-color);
 }
 .surah .container .verses{
     padding: 20px;
     font-family: var(--ff-amiri-quran);
     font-size: var(--fs-40px);
+    color: var(--text-color);
 }
