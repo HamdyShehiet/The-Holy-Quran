@@ -253,6 +253,7 @@ header .container img{
 .surah .container .verses{
     padding: 20px;
     font-family: var(--ff-amiri-quran);
-    font-size: var(--fs-40px);
+    font-size: var(--fs-30px);
     color: var(--text-color);
+    word-spacing: 2px;
 }

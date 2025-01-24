@@ -10,6 +10,8 @@ let smallFontBtn = document.getElementById("small-font-btn");
 let mediumFontBtn = document.getElementById("medium-font-btn");
 let bigFontBtn = document.getElementById("big-font-btn");
 
+let verses = document.getElementById("verses")
+
 settingBtn.addEventListener("click",(e)=>{
     settingMenu.classList.add("open");
 });
@@ -20,10 +22,11 @@ closeBtn.addEventListener("click",(e)=>{
 let theme = localStorage.getItem("theme");
 
 function lightMode(){
-    document.body.classList.remove("sepia","dark");
+    document.body.className= "light"
     lightModeBtn.classList.add("active-mode");
     sepiaModeBtn.classList.remove("active-mode");
     darkModeBtn.classList.remove("active-mode");
+    document.querySelector("#basmala-image").src = "assets/images/Basmala.webp";
     document.querySelector(".setting-icon img").src = "assets/icons/setting-light-mode.webp";
     document.getElementById("close-setting-btn").src = "assets/icons/close-light-mode.webp"
     localStorage.setItem("theme","lightMode");
@@ -33,6 +36,7 @@ function sepiaMode(){
     sepiaModeBtn.classList.add("active-mode");
     lightModeBtn.classList.remove("active-mode");
     darkModeBtn.classList.remove("active-mode");
+    document.querySelector("#basmala-image").src = "assets/images/Basmala.webp";
     document.querySelector(".setting-icon img").src = "assets/icons/setting-light-mode.webp";
     document.getElementById("close-setting-btn").src = "assets/icons/close-light-mode.webp"
     localStorage.setItem("theme","sepiaMode");
@@ -42,6 +46,7 @@ function darkMode(){
     darkModeBtn.classList.add("active-mode");
     lightModeBtn.classList.remove("active-mode");
     sepiaModeBtn.classList.remove("active-mode");
+    document.querySelector("#basmala-image").src = "assets/images/Basmala-white.webp";
     document.querySelector(".setting-icon img").src = "assets/icons/setting-dark-mode.webp";
     document.getElementById("close-setting-btn").src = "assets/icons/close-dark-mode.webp";
     localStorage.setItem("theme","darkMode");
@@ -64,3 +69,21 @@ sepiaModeBtn.onclick = ()=>{
 darkModeBtn.onclick = ()=>{
         darkMode()
 }
+
+let btns = document.querySelectorAll(".font-options button");
+
+btns.forEach(function(element){
+    element.addEventListener("click",function(e){
+        btns.forEach(function(ele){
+            ele.classList.remove("active-font");
+        })
+        if(e.target.classList.contains("small-font-btn")){
+            verses.style.fontSize = "var(--fs-24px)";
+        }else if(e.target.classList.contains("medium-font-btn")){
+            verses.style.fontSize = "var(--fs-30px)";
+        }else{
+            verses.style.fontSize = "var(--fs-40px)";
+        }
+        this.classList.add("active-font");        
+    })
+})
