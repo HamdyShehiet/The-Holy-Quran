@@ -6,11 +6,6 @@ let lightModeBtn = document.getElementById("light-mode-btn");
 let sepiaModeBtn = document.getElementById("sepia-mode-btn");
 let darkModeBtn = document.getElementById("dark-mode-btn");
 
-let smallFontBtn = document.getElementById("small-font-btn");
-let mediumFontBtn = document.getElementById("medium-font-btn");
-let bigFontBtn = document.getElementById("big-font-btn");
-
-
 settingBtn.onclick = ()=>{
     settingMenu.classList.add("open");
 };
@@ -86,3 +81,39 @@ btns.forEach(function(element){
         this.classList.add("active-font");        
     })
 });
+
+let selectOptions = document.getElementById("select");
+let verses = document.getElementById("verses");
+let surahName = document.getElementById("surah-name");
+console.log(selectOptions.innerHTML);
+
+fetch("https://api.alquran.cloud/v1/quran")
+.then(res=>res.json())
+.then((quran)=>{
+    let options = "";
+    for(let i = 0 ; i < quran.data.surahs.length; i++){
+        options += `
+        <option value="${quran.data.surahs[i].name}">${quran.data.surahs[i].number} - ${quran.data.surahs[i].name}</option>
+        `
+    }
+    selectOptions.innerHTML = options;
+
+    selectOptions.onchange =()=>{
+        let surahVerses = "";
+    for(let j = 0 ; j < quran.data.surahs.length; j++){
+        if(selectOptions.value === quran.data.surahs[j].name){
+            if(quran.data.surahs[j].name === "سُورَةُ التَّوۡبَةِ"){
+                document.querySelector("#basmala-image").style.display = "none";
+            }else{
+            document.querySelector("#basmala-image").style.display = "block";
+            }
+        for(let k = 0 ; k < quran.data.surahs[j].ayahs.length; k++){
+                    surahVerses +=`${quran.data.surahs[j].ayahs[k].text}(${quran.data.surahs[j].ayahs[k].numberInSurah})&nbsp;&nbsp;`;
+            }
+        }
+    }
+    surahName.style.display = "block";
+    surahName.innerHTML = selectOptions.value;
+    verses.innerHTML = surahVerses;
+    }
+})
