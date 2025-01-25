@@ -9,6 +9,7 @@
     --secondary-color:#ebf9fa;
     --secondary-color-2:#22a5ad;
     --secondary-color-3:#2ca4ab;
+    --select-color:#0a0a0a;
     --text-color:#272727;
     --light-text-color:#ffffff;
     --options-color:#eff1f3;
@@ -238,7 +239,8 @@ header .container img{
     font-size: var(--fs-22px);
     font-weight: var(--fw-600);
     background-color: transparent;
-    color: var(--light-text-color);
+    color: var(--select-color);
+    cursor: pointer;
 }
 .surah .container{
     flex-direction: column;
@@ -246,14 +248,16 @@ header .container img{
     gap: 30px;
 }
 .surah .container .surah-name{
+    display: none;
     font-family: var(--ff-amiri);
-    font-size: var(--fs-40px);
+    font-size:clamp(var(--fs-30px),5vw,var(--fs-40px));
     color: var(--text-color);
 }
 .surah .container .verses{
     padding: 20px;
     font-family: var(--ff-amiri-quran);
     font-size: var(--fs-30px);
+    font-size:clamp(var(--fs-20px),5vw,var(--fs-30px));
     color: var(--text-color);
     word-spacing: 2px;
 }

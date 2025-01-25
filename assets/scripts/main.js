@@ -10,14 +10,13 @@ let smallFontBtn = document.getElementById("small-font-btn");
 let mediumFontBtn = document.getElementById("medium-font-btn");
 let bigFontBtn = document.getElementById("big-font-btn");
 
-let verses = document.getElementById("verses")
 
-settingBtn.addEventListener("click",(e)=>{
+settingBtn.onclick = ()=>{
     settingMenu.classList.add("open");
-});
-closeBtn.addEventListener("click",(e)=>{
+};
+closeBtn.onclick = ()=>{
     settingMenu.classList.remove("open");
-});
+};
 
 let theme = localStorage.getItem("theme");
 
@@ -86,4 +85,4 @@ btns.forEach(function(element){
         }
         this.classList.add("active-font");        
     })
-})
+});
