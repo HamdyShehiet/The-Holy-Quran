@@ -83,9 +83,8 @@ btns.forEach(function(element){
 });
 
 let selectOptions = document.getElementById("select");
-let verses = document.getElementById("verses");
 let surahName = document.getElementById("surah-name");
-console.log(selectOptions.innerHTML);
+let verses = document.getElementById("verses");
 
 fetch("https://api.alquran.cloud/v1/quran")
 .then(res=>res.json())
@@ -96,24 +95,33 @@ fetch("https://api.alquran.cloud/v1/quran")
         <option value="${quran.data.surahs[i].name}">${quran.data.surahs[i].number} - ${quran.data.surahs[i].name}</option>
         `
     }
-    selectOptions.innerHTML = options;
+    selectOptions.innerHTML += options;
 
     selectOptions.onchange =()=>{
-        let surahVerses = "";
-    for(let j = 0 ; j < quran.data.surahs.length; j++){
-        if(selectOptions.value === quran.data.surahs[j].name){
-            if(quran.data.surahs[j].name === "سُورَةُ التَّوۡبَةِ"){
-                document.querySelector("#basmala-image").style.display = "none";
-            }else{
-            document.querySelector("#basmala-image").style.display = "block";
+        if(selectOptions.value === "اسم السُورَةُ" ){
+            document.getElementById("surah").style.display="none";
+        }else{
+            document.getElementById("surah").style.display="block";
+            let surahVerses = "";
+            for(let j = 0 ; j < quran.data.surahs.length; j++){
+            if(selectOptions.value === quran.data.surahs[j].name){
+                if(quran.data.surahs[j].name === "سُورَةُ التَّوۡبَةِ"){
+                    document.querySelector("#basmala-image").style.display = "none";
+                }else{
+                    document.querySelector("#basmala-image").style.display = "block";
             }
-        for(let k = 0 ; k < quran.data.surahs[j].ayahs.length; k++){
+                for(let k = 0 ; k < quran.data.surahs[j].ayahs.length; k++){
+                    // if(quran.data.surahs[j].ayahs[0].text.includes("بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ")){
+                    //     quran.data.surahs[j].ayahs[0].text.slice(40);
+                    // }
                     surahVerses +=`${quran.data.surahs[j].ayahs[k].text}(${quran.data.surahs[j].ayahs[k].numberInSurah})&nbsp;&nbsp;`;
+                }
             }
-        }
     }
-    surahName.style.display = "block";
-    surahName.innerHTML = selectOptions.value;
-    verses.innerHTML = surahVerses;
+        surahName.style.display="block"
+        surahName.innerHTML = selectOptions.value;
+        verses.innerHTML = surahVerses;
     }
+}
 })
+

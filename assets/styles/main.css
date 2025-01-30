@@ -248,9 +248,13 @@ header .container img{
     gap: 30px;
 }
 .surah .container .surah-name{
+    display: none;
     font-family: var(--ff-amiri);
     font-size:clamp(var(--fs-30px),5vw,var(--fs-40px));
     color: var(--text-color);
+}
+.surah .container .basmala-image{
+    display: none;
 }
 .surah .container .verses{
     padding: 20px;
