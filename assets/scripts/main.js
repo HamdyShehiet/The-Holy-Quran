@@ -109,15 +109,22 @@ fetch("https://api.alquran.cloud/v1/quran")
                     document.querySelector("#basmala-image").style.display = "none";
                 }else{
                     document.querySelector("#basmala-image").style.display = "block";
-            }
+                }
                 for(let k = 0 ; k < quran.data.surahs[j].ayahs.length; k++){
-                    // if(quran.data.surahs[j].ayahs[0].text.includes("بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ")){
-                    //     quran.data.surahs[j].ayahs[0].text.slice(40);
-                    // }
-                    surahVerses +=`${quran.data.surahs[j].ayahs[k].text}(${quran.data.surahs[j].ayahs[k].numberInSurah})&nbsp;&nbsp;`;
+                    if(quran.data.surahs[j].ayahs[k].text.startsWith("بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ") || quran.data.surahs[j].ayahs[k].text.startsWith("بِّسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ") ){
+                        surahVerses +=`
+                        ${quran.data.surahs[j].ayahs[k].text.slice(40)}
+                        &nbsp(${quran.data.surahs[j].ayahs[k].numberInSurah})&nbsp;
+                        `;
+                    }else{
+                        surahVerses +=`
+                        ${quran.data.surahs[j].ayahs[k].text}
+                        &nbsp(${quran.data.surahs[j].ayahs[k].numberInSurah})&nbsp;
+                        `
+                    }
                 }
             }
-    }
+            }
         surahName.style.display="block"
         surahName.innerHTML = selectOptions.value;
         verses.innerHTML = surahVerses;
@@ -125,3 +132,7 @@ fetch("https://api.alquran.cloud/v1/quran")
 }
 })
 
+// surahVerses +=`
+// ${quran.data.surahs[j].ayahs[k].text.startsWith("بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ") || quran.data.surahs[j].ayahs[k].text.startsWith("بِّسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ") ? quran.data.surahs[j].ayahs[k].text.slice(40) : quran.data.surahs[j].ayahs[k].text}
+// &nbsp(${quran.data.surahs[j].ayahs[k].numberInSurah})&nbsp;
+// `;
